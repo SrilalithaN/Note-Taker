@@ -54,4 +54,4 @@ Clone the repository to your local development environment.
 
 ## Demo
 
-- The following is the link to the demo of the app : [Link to demo](.demo/note-taker-demo.mp4)
+- The following is the link to the demo of the app : [Link to demo](demo/note-taker-demo.mp4)

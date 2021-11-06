@@ -1,12 +1,12 @@
-const api = require("express").Router;
+const api = require("express").Router();
 const {
   readNote,
   readAndAppendNote,
-  readAndDeleteNote,
+  deleteNote,
 } = require("../helpers/saveData");
 const { v4: uuidv4 } = require("uuid");
 
-api.get("./notes", (req, res) => {
+api.get("/notes", (req, res) => {
   readNote("./db/db.json").then((data) => res.json(JSON.parse(data)));
 });
 
@@ -27,12 +27,12 @@ api.post("/notes", (req, res) => {
 
 api.delete("/notes/:id", (req, res) => {
   const { id } = req.params;
-  console.log("-Console Log api.del_id -" + id);
 
   if (id) {
-    readAndDeleteNote(id, "./db/db.json");
+    deleteNote(id, "./db/db.json");
     res.json(`note deleted!`);
   } else {
     res.error(`Error deleting note`);
   }
 });
+module.exports = { api };

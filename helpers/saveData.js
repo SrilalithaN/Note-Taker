@@ -1,6 +1,7 @@
 const util = require("util");
 const fs = require("fs");
 
+
 const readNote = util.promisify(fs.readFile);
 const writeNote = (destination, content) =>
   fs.writeFile(destination, JSON.stringify(content, null, 2), (err) =>
@@ -18,7 +19,7 @@ const readAndAppendNote = (content, file) => {
     }
   });
 };
-const readAndDeleteNote = (id, file) => {
+const deleteNote = (id, file) => {
   fs.readFile(file, (err, data) => {
     if (err) {
       console.error(err);
@@ -35,5 +36,5 @@ module.exports = {
   readNote,
   writeNote,
   readAndAppendNote,
-  readAndDeleteNote,
+  deleteNote,
 };

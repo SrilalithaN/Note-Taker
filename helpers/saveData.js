@@ -1,7 +1,6 @@
 const util = require("util");
 const fs = require("fs");
 
-
 const readNote = util.promisify(fs.readFile);
 const writeNote = (destination, content) =>
   fs.writeFile(destination, JSON.stringify(content, null, 2), (err) =>
@@ -27,8 +26,8 @@ const deleteNote = (id, file) => {
       const parsedData = JSON.parse(data);
       filteredData = parsedData.filter((note) => id !== note.id);
 
-      // parsedData.push(content);
-      writeToFile(file, filteredData);
+      
+      writeNote(file, filteredData);
     }
   });
 };

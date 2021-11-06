@@ -26,8 +26,10 @@ api.post("/notes", (req, res) => {
 });
 
 api.delete("/notes/:id", (req, res) => {
+  console.log(`${req.method} request received to delete the note`);
   const { id } = req.params;
 
+  console.log("Deleted the note with id " + id);
   if (id) {
     deleteNote(id, "./db/db.json");
     res.json(`note deleted!`);
@@ -35,4 +37,4 @@ api.delete("/notes/:id", (req, res) => {
     res.error(`Error deleting note`);
   }
 });
-module.exports = { api };
+module.exports = api;

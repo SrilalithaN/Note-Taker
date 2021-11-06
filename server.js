@@ -1,5 +1,6 @@
 const express = require("express");
 const apiRoutes = require("./routes/apiroutes");
+const path = require("path");
 
 const app = express();
 
@@ -22,5 +23,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`API Server is ready on port ${PORT}!`);
+  console.log(`App listening at http://localhost:${PORT} 🚀!`);
 });

@@ -12,6 +12,7 @@ An application to write and save note with Express.js back end and will save and
 - [Tests](#Tests)
 - [Contributing](#Contributing)
 - [Assets](#Assets)
+- [Demo](#Demo)
 
 ## Installation
 
@@ -25,7 +26,7 @@ Clone the repository to your local development environment.
 
 - To use the application locally, run node server.js in your CLI, and then open http://localhost:3001 in your preferred browser.
 
-- The Note Taker app is live on Heroku for you to use as well.
+- The Note Taker app is [live on Heroku](https://note-taker-app-sri.herokuapp.com/) for you to use as well.
 
 ## Usage
 
@@ -39,14 +40,18 @@ Clone the repository to your local development environment.
 
 ## Tests
 
-* There are no tests for this application
+- There are no tests for this application
 
 ## Contributing
-* Feel free to fork the repository and make contributions.
+
+- Feel free to fork the repository and make contributions.
 
 ## Assets
 
-* The following is the link to the delpoyed code : https://github.com/SrilalithaN/Note-Taker
+- The following is the link to the delpoyed code : https://github.com/SrilalithaN/Note-Taker
 
-* The following is the link to the deployed app in Heroku :
+- The following is the link to the deployed app in Heroku : https://note-taker-app-sri.herokuapp.com/
 
+## Demo
+
+* The following is the link to the demo of the app : [Link to demo](public\assets\demo\note-taker-demo.mp4)
